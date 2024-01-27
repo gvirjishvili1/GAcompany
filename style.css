@@ -5,28 +5,34 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     height: 100vh;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     width: 100%;   
-    scroll-behavior: smooth;
+    
 }
+
 nav {
     background-color: #ffffff;
-    overflow-y:visible;
+    overflow-y: visible;
     width: 100%;
     position: relative;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
 }
 .navcontact {
     position: absolute;
     top: 0;
     right: 0;
     display: flex;
-    flex-direction: column;
     text-align: center;
     align-items: start;
     gap: 5px;
@@ -41,11 +47,11 @@ ul {
     display: flex;
     gap: 14px;
     overflow: hidden;
-    padding-top: 12px;
+    padding-top: 9px;
 }
 nav a, li > *{
     font-size: 22px;
-    color: #FF8C00;
+    color: #FF5900;
     text-decoration: none;
     text-align: center;
     padding: 0px 16px;
@@ -62,8 +68,16 @@ nav a, li > *{
     flex-wrap: wrap;
     align-items: center;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
 .topbar {
-    border-bottom: 1px solid #e5e5e5;
     padding: 14px 0 4px 0;
     display: flex;
     align-items: center;
@@ -78,7 +92,7 @@ nav a, li > *{
 }
 
 #brandlogo span {
-    color: #FF8C00;
+    color: #D14900;
     text-align: center;
     font-size: 24px;
     font-family: 'Exo 2', sans-serif;
@@ -94,20 +108,20 @@ main {
     width: 100%;
     overflow: hidden;
 }
+/* Carousel from here */
 #carousel {
     background: 
-    url("static/banner-removebg-preview.png") left top no-repeat, /* First background image */
-    url("static/carousel1.jpg") right top no-repeat; /* Second background image */
-    background-size: 50% 100%, 50% 100%; /* Adjust the width percentage and auto height */
+    url("static/banner-removebg-preview.png") left top no-repeat,
+    url("static/carousel1.jpg") right top no-repeat;
+    background-size: 50% 100%, 50% 100%; 
     height: 58vh;
     min-height: 58vh;
     width: 100%;
     overflow: hidden;
     position: relative;
     padding: 20px;
-    z-index: 0;
+    border-bottom: 1px solid #e5e5e5;
 }
-
 #carousel img {
     transition: opacity 0.5s ease;
 }
@@ -117,21 +131,60 @@ main {
     left: 22%;
     display: flex;
     max-width: 20%;
-    min-width: 23%;
-    z-index: 1;
+    min-width: 24%;
     bottom: 0;
-    flex-direction: column;
-    color: #FF8C00;
+    color: #D14900;
     font-size: 22px;
-    text-align:left;
+    text-align :left;
     font-family: 'Lato', sans-serif;
+    gap: 1.8rem;
+}
+i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .inner-carousel h2 {
-    padding-bottom: 10px;
     font-weight: bold;
     text-align: center;
     letter-spacing: 0.4rem;
 }
+
+.inner-carousel a {
+    text-decoration: none;
+    color: white;
+}
+
+.inner-carousel button {
+    font-size: 18px;
+    margin-top: 2px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow,transform;
+    background: #FF8C00;
+    opacity: 0.8;
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    padding: 0 0.9em;
+    width: 50%;
+    border-radius: 0.3em;
+    color: #fff;
+    height: 2.6em;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.inner-carousel button:hover {
+    box-shadow: 0px 0.1em 0.2em #FF8C00, 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+    transform: translateY(-0.1em);
+}
+
+.inner-carousel button:active {
+    box-shadow: inset 0px 0.1em 0.6em #FF8C00;
+    transform: translateY(0em);
+}
+
 .search {
     width: 100%;
     height: 30vh;
@@ -139,9 +192,10 @@ main {
     justify-content: center;
     align-items: center;
 }
+
 /* searchBar */
 :root {
-    --rad: 0.4rem;
+    --rad: 1rem;
     --dur: 0.3s;
     --color-dark: #2f2f2f;
     --color-light: #fff;
@@ -157,8 +211,8 @@ form {
     background: var(--color-brand);
     border-radius: var(--rad);
 }
-input,
-button {
+.search input,
+.search button {
   height: var(--height);
   font-family: var(--font-fam);
   border: 0;
@@ -179,7 +233,7 @@ input[type="search"] {
     position: relative;
 }
   
-button {
+.search button {
     display: none;
     position: absolute;
     top: 0;
@@ -199,3 +253,73 @@ input:not(:placeholder-shown) + button {
     display: block;
 }
 
+.about {
+    background-color: #3399ff;
+    width: 100%;
+    height: 80vh;
+    border-radius: 30% 30% 0 0;
+    position: absolute;
+    margin-top: 70px;
+    transition: all 2s;
+}
+
+.inside-about{
+    width: 70%;
+    justify-content: space-around;
+}
+
+.box {
+    background-color: white;
+    border-radius: 20px;
+    border-bottom: 8px solid #4169E1;
+    box-shadow: 0px 1px 15px 2px #00000014;
+    display: flex;
+    justify-content: center;
+    max-width: 33%;
+    min-width: 30%;
+    text-align: start;
+    gap: 10px;
+    max-width: 40%;
+    color: #FF8C00;
+    height: 420px;
+    overflow: hidden;
+    transition: all 1.2s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+.about h1 {
+    position: relative;
+    text-align: center;
+    bottom: 60px;
+    color: #FF8C00;
+    font-size: 42px;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+}
+
+.inside-about {
+    position: relative;
+    top: 40px;
+}
+
+.box img {
+    border-radius: 20px 20px 20% 40%;
+    width: 100%;
+}
+
+.box p {
+    font-size: 18px;
+    
+}
+.box h2 {
+    text-align: center;
+}
+span {
+    font-weight: bold;
+}
+
+.box > div {
+    padding: 14px 10px 30px 28px;
+}
