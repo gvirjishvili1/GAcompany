@@ -14,50 +14,114 @@
         <div class="topbar container">
             <a href="#" id="brandlogo">
                 <img src="static/result.png" alt="Logo">
-                <span class="logotext">GAcompany</span>
+                <h2 class="logotext">GA<span>company</span></h2>
             </a>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#our-brands">Our Brands</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#company-brands">News</a></li>
                 <li><a href="#our-brands">Our Products</a></li>
-                <li><a href="#services">Services</a></li>    
+                <li><a href="#services">Contact Us</a></li>  
+                <li><i class="bi bi-search" id="searchBtn"></i></li>   
             </ul>
-        </div>
-        <div class="navcontact column">
-            <a href="mailto:gasportsagency@gmail.com"><i class="bi bi-envelope"> gasportsagency@gmail.com</i></a>
-            <a href="tel:+995593312203"><i class="bi bi-telephone-fill"> 551505913</i></a>
+            <div class="search">
+                <form id="form" role="search">
+                    <input type="search" id="searchBar" placeholder="Search..." autofocus required />
+                    <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+            </div>
         </div>
     </nav>
     <main class="main">
-        <div id="carousel">
-            <div class="inner-carousel column">
-                <h2>GA company</h2>
-                <p>GA Sports Agency LLC is a company that produces and distributes various food products from various Asian countries.</p>
-                <button role="button"><a href="#about">See more</a></button>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <div class="inside-carousel">
+                        <h2 id="carousel-header1">WELCOME TO <span>GAcompany</span></h2>
+                        <p>Your Premier Partner for Frozen Semi-finished Products from Asia</p>
+                        <a href="#about-us"><button id="container-button1">See more</button></a>
+                    </div>
+                </div>
+                <div class="carousel-item"></div>
             </div>
+            <button id="prev-button"><i class="bi bi-arrow-left"></i></button>
+            <button id="next-button"><i class="bi bi-arrow-right"></i></button>
         </div>
-        <div class="search" >
-            <form id="form" role="search">
-                <input type="search" id="search" placeholder="Search..." autofocus required />
-                <button type="submit"><i class="bi bi-search"></i></button>
-            </form>
-        </div>
-        <div class="about">
-            <h1>COMPANY OWNS</h1>
-            <div class="row container inside-about" id="about">
+        <div class="section">
+            <div class="row box-container">
                 <div class="box column">
-                    <img src="static/box-image.jpg" alt="" srcset="" class="aboutImage">
-                    <div>
-                        <h2>Distribution Services</h2>
-                        <p><span>GA Agency LLC</span> is a company that produces and distributes various food products from various Asian countries.</p>
+                    <img src="static/quality icon.png" alt="" srcset="" class="aboutImage">
+                    <div class="inside_box">
+                        <div class="box-title">
+                            <h2>Exeptional Quality</h2>
+                        </div>
+                        <p>Our frozen semi-finished products are renowned for their exceptional quality and freshness.</p>
+                    </div>
+                </div>
+                <div class="box column">
+                    <img src="static/boximg.jpg" alt="" srcset="" class="aboutImage">
+                    <div class="inside_box">
+                        <div class="box-title">
+                            <h2>Global Sourcing</h2>
+                        </div>
+                        <p>We collaborate with trusted partners in Asia to bring you a diverse and authentic range of products.</p>
                     </div>
                 </div>
                 <div class="box column">
                     <img src="static/box-image2.jpg" alt="" srcset="" class="aboutImage">
-                    <div>
-                        <h2>Football Academy</h2>
-                        <p>The company also owns a football academy called <span>Villa</span>, the founders of which are Giorgi Shanidze and Giorgi Adeishvili.</p>
+                    <div class="inside_box">
+                        <div class="box-title">
+                            <h2>Reliable Logistics</h2>
+                        </div>
+                        <p>Partnering with leading brands, we ensure reliable and timely deliveries, maintaining the integrity of our frozen goods.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="about-us">
+                <h1>ABOUT US</h1>
+                <h3><span>Ga Sports Agency Ltd.</span> is a company that produces and at the same time distributes various food products in different countries of Asia, which is united under the name of the Iberia brand. The company also owns football school <b>Villa</b> and laurel and corn plantations in Georgia. The founders are Giorgi Shanidze and Giorgi Adeishvili.</h3>
+                <a href="#"><button id="aboutUs-button">See More</button></a>
+            </div>
+            <div class="" id="partner-brands">
+                <h2 id="partnerBrands-title">PARTNER BRANDS</h2>
+                <div class="slider">
+                    <div class="slide-track">
+                        <a href="https://www.brf-global.com/en/" class="slide" >
+                            <img src="static/brand1.jpg" alt="brand" height="100"/>
+                        </a>
+                        <a href="https://www.brf-global.com/en/" class="slide">
+                            <img src="static/brand2.png" alt="brand" />
+                        </a>
+                        <a href="https://yanurtrading.com/p4_domee.php" class="slide">
+                            <img src="static/brand3.jpg" alt="brand" />
+                        </a>
+                        <a href="https://www.copacol.com.br/" class="slide">
+                            <img src="static/brand4.png" alt="brand" height="100"/>
+                        </a>
+                        <a href="https://www.searafoodsme.com/" class="slide">
+                            <img src="static/brand5.jpg" alt="brand" height="100"/>
+                        </a>
+                        <a href="https://www.facebook.com/Dvillageorgia" class="slide">
+                            <img src="static/brand6.png" alt="brand" height="100"/>
+                        </a>
+                        <a href="https://www.brf-global.com/en/" class="slide" >
+                            <img src="static/brand1.jpg" alt="brand" height="100"/>
+                        </a>
+                        <a href="https://www.brf-global.com/en/" class="slide">
+                            <img src="static/brand2.png" alt="brand" />
+                        </a>
+                        <a href="https://yanurtrading.com/p4_domee.php" class="slide">
+                            <img src="static/brand3.jpg" alt="brand" />
+                        </a>
+                        <a href="https://www.copacol.com.br/" class="slide">
+                            <img src="static/brand4.png" alt="brand" height="100"/>
+                        </a>
+                        <a href="https://www.searafoodsme.com/" class="slide">
+                            <img src="static/brand5.jpg" alt="brand" height="100"/>
+                        </a>
+                        <a href="https://www.facebook.com/Dvillageorgia" class="slide">
+                            <img src="static/brand6.png" alt="brand" height="100"/>
+                        </a>
                     </div>
                 </div>
             </div>
