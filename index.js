@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
      const searchButton = $("#searchBtn");
      const searchBar = $(".search");
