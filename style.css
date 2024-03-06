@@ -131,10 +131,10 @@ li > a:hover::after, li > a.active-nav::after {
     transition: all 1s;
 }
 
-#brandlogo h2 {
+.logotext {
     color: #153d5c;
     text-align: center;
-    font-size: 24px;
+    font-size: clamp(21px, 4vw, 24px);
     font-family: 'Exo 2', sans-serif;
     letter-spacing: 0.2rem;
     font-weight: bold;
@@ -559,9 +559,8 @@ section {
 }
 
 .slide{
-    height: 140px;
     margin: 0px 24px;
-    width: 100%;
+    font-size: 0px;
 }
 
 .slide img {
