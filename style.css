@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Poppins&display=swap'); /* Logo Font */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /* Logo Font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -31,9 +31,11 @@ span {
 nav {
     background-color: #ffffff;
     overflow-y: visible;
-    width: 100%;
+    max-width: 100%;
     border-bottom: 1px solid #e5e5e5;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .navcontact > * {
@@ -45,7 +47,7 @@ ul {
     list-style-type: none;
     display: flex;
     overflow: hidden;
-    padding-top: 14px;
+    padding-top: 9px;
 }
 li {
     text-align: center;
@@ -59,7 +61,7 @@ li:first-of-type(i) {
 }
 
 nav a, li > *{
-    font-size: 18px;
+    font-size: clamp(14px, 1.4vw, 19px);
     color: var(--nav-a-color);
     text-decoration: none;
     text-align: center;
@@ -68,7 +70,6 @@ nav a, li > *{
     font-weight: 500;
     cursor: pointer;
     display: block;
-    transition: 1s;
 }
 
 li > * {
@@ -233,7 +234,7 @@ main {
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 85vh;
+    height: 86vh;
 }
 
 .carousel {
@@ -277,13 +278,38 @@ main {
 }
 
 #carousel-header1 {
-    font-size: 55px;
+    font-size: clamp(34px, 3vw, 55px);
     letter-spacing: 0.2rem;
     font-weight: bolder;
 }
 
 .inside-carousel p{
-    font-size: 22px;
+    font-size: clamp(14px, 2vw, 24px);
+    margin-top: 14px;
+}
+
+.animated-text {
+    width: 33em;
+    margin: 0 auto;
+    border-right: 3px solid rgba(255,255,255,.75);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%); 
+}
+
+.typing-animation {
+    animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 33em;}
+}
+
+@keyframes blinkTextCursor{
+    from{border-right-color: rgb(255, 125, 68);}
+    to{border-right-color: transparent;}
 }
 
 .carousel-item:first-child {
@@ -299,18 +325,18 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 18px;
+    font-size: clamp(14px, 2vw, 18px);
     padding: 10px;
     cursor: pointer;
     color: white;
     background-color: transparent;
     border: none;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     margin: 0 10px;
 }
 
 #prev-button:hover, #next-button:hover {
-    background: #000;
+    background: rgba(0, 0, 0, 0.5);
 }
 #prev-button {
     left: 10px;
@@ -366,8 +392,6 @@ i {
     justify-content: center;
 }
 
-
-
 section {
     width: 100%;
 }
@@ -393,7 +417,7 @@ section {
     overflow: hidden;
     transition: all 1.2s;
     width: 100%;
-    box-sizing: border-box;
+    object-fit: cover;
 }
 
 .box-title {
@@ -597,7 +621,7 @@ section {
     color: rgb(255, 125, 68);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1210px) {
     li:last-child{
         display: none;
     }
@@ -608,18 +632,30 @@ section {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1208px) {
     ul li:not(:last-child) {
         display: none;
     }
+
     ul li {
         border-right: none;
     }
+
     ul {
         padding-top: 0;
     }
+    
     .navbar i {
         display: block;
         font-size: 28px;
+    }
+
+    .carousel-container {
+        height: 60vh;
+    }
+}
+@media (max-width: 1024px) {
+    #brandlogo {
+        flex-wrap: wrap-reverse;
     }
 }
