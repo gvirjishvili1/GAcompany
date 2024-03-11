@@ -28,6 +28,13 @@ span {
     font-weight: bold;
 }
 
+button:focus, a:focus, i:focus {
+    outline: none;
+}
+
+i {
+    -webkit-tap-highlight-color: transparent;
+}
 nav {
     background-color: #ffffff;
     overflow-y: visible;
