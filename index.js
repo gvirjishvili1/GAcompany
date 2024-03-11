@@ -20,13 +20,11 @@ $(document).ready(function () {
      }
 
      function nextSlide() {
-          console.log('Next slide clicked');
           currentIndex = (currentIndex + 1) % $carouselItems.length;
           updateCarousel();
      }
       
       function prevSlide() {
-          console.log('Prev slide clicked');
           currentIndex = (currentIndex - 1 + $carouselItems.length) % $carouselItems.length;
           updateCarousel();
      }

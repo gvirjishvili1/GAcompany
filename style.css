@@ -47,7 +47,7 @@ ul {
     list-style-type: none;
     display: flex;
     overflow: hidden;
-    padding-top: 9px;
+    padding-top: 7px;
 }
 li {
     text-align: center;
@@ -61,7 +61,7 @@ li:first-of-type(i) {
 }
 
 nav a, li > *{
-    font-size: clamp(14px, 1.4vw, 19px);
+    font-size: clamp(12px, 1.5vw, 18px);
     color: var(--nav-a-color);
     text-decoration: none;
     text-align: center;
@@ -137,7 +137,6 @@ li > a:hover::after, li > a.active-nav::after {
     text-align: center;
     font-size: clamp(21px, 4vw, 24px);
     font-family: 'Exo 2', sans-serif;
-    letter-spacing: 0.2rem;
     font-weight: bold;
 }
 
@@ -314,13 +313,17 @@ main {
 
 .carousel-item:first-child {
     background-image: url('static/background.jpg');
-    z-index: 1;
 }
 
 .carousel-item:nth-child(2) {
     background-image: url('static/background2.jpg');
 }
 
+.carousel-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 #prev-button, #next-button{
     position: absolute;
     top: 50%;
@@ -396,51 +399,69 @@ section {
     width: 100%;
 }
 
-.box-container{
-    width: 75%;
+.advantages-box-container{
+    width: 80%;
     margin: auto;
     padding: 60px 0px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 2rem;
 }
 
-.box {
+.advantages-box {
     background-color: white;
     display: flex;
-    min-width: min-content;
+    min-width: 290px;
     flex: 1 1 30%;
+    max-width: 380px;
     text-align: start;
-    min-height: auto;
-    max-height: 470px;
-    overflow: hidden;
     transition: all 1.2s;
     width: 100%;
-    object-fit: cover;
+    overflow: hidden;
 }
 
-.box-title {
+.inside_box {
+    overflow: hidden;
+    margin-top: 18px;
+}
+
+.advantagesImage {
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.advantages-box-title {
     padding-bottom: 20px;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 2px solid #ececec;
     width: max-content;
 }
 
-.box-title h2 {
+.advantages-box-title:hover {
+    color: rgb(255, 125, 68);
+}
+
+.advantages-box h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     letter-spacing: 0.1rem;
     font-weight: 600;
 }
 
-.box img {
+.advantagesImage img {
     width: 100%;
-    height: 180px;
-    border-radius: 2px;
-    margin-bottom: 23px;
+    height: 100%;
+    object-fit: cover;
+    transition: 300ms ease-in-out;
 }
 
-.box p {
+.advantages-box:hover img {
+    transform: scale(1.1);
+}
+
+.advantages-box p {
     font-size: 18px;
     text-align: center;
     font-family: 'PT Sans', sans-serif;
@@ -480,7 +501,7 @@ section {
 }
 
 #about-us h3 {
-    margin-top: 30px;
+    margin-top: 14px;
     font-weight: 100;
 }
 
@@ -621,7 +642,7 @@ section {
     color: rgb(255, 125, 68);
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1215px) {
     li:last-child{
         display: none;
     }
@@ -630,10 +651,19 @@ section {
     .container {
         width: 95%;
     }
+    #brandlogo img{
+        display: none;
+    }
+    .topbar {
+        padding: 16px 0px 14px 8px;
+    }
+    #searchBtn {
+        display: flex !important;
+    }
 }
 
-@media (max-width: 1208px) {
-    ul li:not(:last-child) {
+@media (max-width: 1215px) {
+    ul li:not(:last-child){
         display: none;
     }
 
@@ -646,8 +676,10 @@ section {
     }
     
     .navbar i {
-        display: block;
+        display: flex;
         font-size: 28px;
+        position: absolute;
+        right: 0;
     }
 
     .carousel-container {
