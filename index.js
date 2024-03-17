@@ -7,11 +7,16 @@ $(document).ready(function () {
      const $prevButton = $('#prev-button');
    
      let currentIndex = 0;
+
+     $("loading-overlay").fadeOut();
+
      $(searchBar).hide();
+     
      $(searchButton).click(function(){
          $(searchBar).toggle();
      }); 
      
+
      updateCarousel();
      
      function updateCarousel() {
@@ -32,4 +37,3 @@ $(document).ready(function () {
      $nextButton.on('click', nextSlide);
      $prevButton.on('click', prevSlide);
 });
-
