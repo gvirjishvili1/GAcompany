@@ -101,6 +101,7 @@ li > * {
     text-transform: uppercase;
     text-align: center;
     align-items: center;
+    display: flex;
 }
 
 li > *:hover {
@@ -854,13 +855,13 @@ footer {
     }
 
     .navbar i {
-        position: absolute;
+        position: relative;
         right: 0;
     }
 }
 
 @media (max-width: 1215px) {
-    ul li a {
+    ul li > *:not(i) {
         display: none;
     }
     ul li{
